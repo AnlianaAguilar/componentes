@@ -25,4 +25,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+body{
+  background-image: url(https://rickandmortypod.com/wp-content/uploads/2018/11/cropped-RM_page-header_background1-3.png);
+}
 </style>
