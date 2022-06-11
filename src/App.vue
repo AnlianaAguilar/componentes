@@ -1,18 +1,25 @@
 <template>
   <div id="app">
+    <h1 class="title">Pesonajes Rick and Morty</h1>
 
+    <my-image 
+    v-for="character in characters"
+    :key="character.nombre"
+    :image_character="character.src"
+    :name_character="character.nombre"
+    ></my-image>
 
   </div>
 </template>
 
 <script>
-
+import Image from '@/components/Image.vue'
 
 export default {
   name: 'App',
   data(){
     return{
-      character:[
+      characters:[
         {
           nombre: "Rick Sanchez",
           src:"https://rickandmortyapi.com/api/character/avatar/1.jpeg"
@@ -45,7 +52,7 @@ export default {
     }
   },
   components: {
-    
+    "my-image":Image,
   }
 }
 </script>
@@ -62,5 +69,12 @@ export default {
 
 body{
   background-image: url(https://rickandmortypod.com/wp-content/uploads/2018/11/cropped-RM_page-header_background1-3.png);
+  background-size: cover;
+}
+
+.title{
+  font-size: 50px;
+  font-weight: bolder;
+  color: rgb(37, 177, 37);
 }
 </style>
